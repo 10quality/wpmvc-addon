@@ -7,14 +7,14 @@
  * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
  * @package WPMVC\Addons
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 if ( ! function_exists( 'addon_assets_url' ) ) {
     /**
      * Returns url of an asset located in the addon.
      * Addon package name should not be prefixed with "addon" or "assets".
-     * @since 1.0.1
+     * @since 1.0.0
      *
      * @link https://codex.wordpress.org/Function_Reference/home_url
      * @link https://codex.wordpress.org/Function_Reference/network_home_url
@@ -38,6 +38,7 @@ if ( ! function_exists( 'addon_assets_url' ) ) {
         // Clean project relative path
         $route = preg_replace( '/\/addon[\/\\A-Za-z0-9\.\\-]+/', '', $route );
         $route = preg_replace( '/\/assets[\/\\A-Za-z0-9\.\\-]+/', '', $route );
-        return $url.'/'.apply_filters( 'app_route', $route ).'/assets/'.$path;
+        $route = apply_filters( 'app_route', $route );
+        return $url . '/' . apply_filters( 'app_route_addon', $route ) . '/assets/' . $path;
     }
 }
