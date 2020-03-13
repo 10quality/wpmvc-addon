@@ -36,8 +36,8 @@ if ( ! function_exists( 'addon_assets_url' ) ) {
         // Clean base path
         $route = preg_replace( '/.+?(?=wp-content)/', '', $route );
         // Clean project relative path
-        $route = preg_replace( '/\/addon[\/\\A-Za-z0-9\.\\-]+/', '', $route );
-        $route = preg_replace( '/\/assets[\/\\A-Za-z0-9\.\\-]+/', '', $route );
+        $route = preg_replace( '/\/addon[\/\\\\A-Za-z0-9\.\-]+/', '', $route );
+        $route = preg_replace( '/\/assets[\/\\\\A-Za-z0-9\.\-]+/', '', $route );
         $route = apply_filters( 'app_route', $route );
         return $url . '/' . apply_filters( 'app_route_addon', $route ) . '/assets/' . $path;
     }
