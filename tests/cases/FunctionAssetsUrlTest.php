@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
  * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
  * @package WPMVC\Addons
- * @version 1.0.2
+ * @version 1.0.3
  */
 class FunctionAssetsUrlTest extends TestCase
 {
