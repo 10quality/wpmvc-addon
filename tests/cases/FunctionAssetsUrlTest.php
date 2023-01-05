@@ -1,5 +1,7 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Tests functions
  *
@@ -7,9 +9,9 @@
  * @copyright 10Quality <http://www.10quality.com>
  * @license MIT
  * @package WPMVC\Addons
- * @version 1.0.0
+ * @version 1.0.2
  */
-class FunctionAssetsUrlTest extends PHPUnit_Framework_TestCase
+class FunctionAssetsUrlTest extends TestCase
 {
     /**
      * Test that "addon_assets_url" exists.
